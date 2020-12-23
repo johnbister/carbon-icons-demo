@@ -1,0 +1,17 @@
+@mixin gray-background() {
+  // background-color: $ui-01;
+  background-color: #f4f4f4;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: -64px;
+    top: -64px;
+    left: -64px;
+    bottom: 0;
+    // background: $ui-01;
+    background: #f4f4f4;
+    z-index: -1;
+  }
+}

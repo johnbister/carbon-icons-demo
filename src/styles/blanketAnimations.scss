@@ -1,0 +1,61 @@
+@media (prefers-reduced-motion: reduce) {
+  svg {
+    animation: none !important;
+  }
+}
+
+svg {
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+@mixin carbon-animation--pop() {    
+    &:hover  svg {
+      animation: .4s pop ease-in;
+    }
+  
+   @keyframes pop {
+     50% { transform: scale(1.1)}
+     100% { transform: scale(1)}
+   }
+};
+
+@mixin carbon-animation--twist() { 
+    &:hover svg {
+      animation: .5s twist ease-in;
+    }
+   
+   @keyframes twist {
+     33% { transform: rotate(15deg)}
+     66% { transform: rotate(-15deg)}
+     100% { transform: rotate(0)}
+   }
+};
+
+@mixin carbon-animation--spin() { 
+    &:hover svg {
+      animation: .5s spin ease-in;
+    }
+   @keyframes spin {
+     100% { transform: rotate(360deg)}
+   }
+};
+
+.Pop {
+  @include carbon-animation--pop();
+}
+
+.Twist {
+   @include carbon-animation--twist();
+}
+
+.Spin {
+  @include carbon-animation--spin();
+}
+
+.None:hover svg {
+  animation: none;
+}
+
+
+
