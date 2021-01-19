@@ -10,28 +10,28 @@ import EducationIcon from "../components/IconAnimations/EducationIcon";
 
 let tileDetails = [
   {
-    title: "Develop APIs and Titles",
+    title: "Develop APIs and titles",
     info:
       "Edit, assemble, secure, and test APIs.  Package APIs using products for publishing to consumers",
     icon: DevelopIcon
   },
   {
-    title: "Manage Catalogs",
+    title: "Manage catalogs",
     info: "Manage active APIs and consumers",
     icon: CatalogIcon
   },
   {
-    title: "Manage Resources",
+    title: "Manage resources",
     info: "Configure user registries, OAuth providers, and TLS",
     icon: ResourcesIcon
   },
   {
-    title: "Manage Settings",
+    title: "Manage settings",
     info: "Edit settings for roles, notifications, and more",
     icon: SettingsIcon
   },
   {
-    title: "Learn More",
+    title: "Learn more",
     info: "Documentation and tutorials with step-by-step instructions",
     icon: EducationIcon
     // icon:learnIcon
@@ -42,7 +42,7 @@ let tileDetails = [
     icon: ConnectIcon
   },
   {
-    title: "Download Toolkit",
+    title: "Download toolkit",
     info: "Download toolkit and credentials for various platforms",
     icon: DownloadIcon
   },
