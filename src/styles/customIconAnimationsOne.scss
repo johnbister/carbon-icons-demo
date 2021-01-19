@@ -1,0 +1,256 @@
+// version 1 - Dec 2020
+
+// @media (prefers-reduced-motion: reduce) {
+//   svg {
+//     animation: none !important;
+//   }
+// }
+
+// @mixin carbon-animation--develop-icon {
+//   &:hover .pencil {
+//     animation: pencil 2.5s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+//   }
+
+//   .pencil {
+//     transform-origin: 50% 50%;
+//     will-change: transform;
+//   }
+
+//   @keyframes pencil {
+//     10% {transform: translateX(10px)}
+//     20% {transform: translateX(0px)}
+//     100% {transform: translateX(0px)}
+//   }
+// }
+
+// @mixin carbon-animation-catalog-icon {
+//   &:hover .catalog--one {
+//     animation: catalogs 3s forwards infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+//   }
+//   &:hover .catalog--two {
+//     animation: catalogs 3s forwards 0.2s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+//   }
+//   &:hover .catalog--three {
+//     animation: catalogs 3s forwards 0.4s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+//   }
+//   &:hover .catalog--four {
+//     animation: catalogs 3s forwards 0.6s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+//   }
+  
+//   .catalog {
+//     transform-origin: 50% 50%;
+//     will-change: transform;
+//   }
+
+//   @keyframes catalogs {
+//     8% {transform: scale(1.1)}
+//     16% {transform: scale(1)}
+//     100% {transform: scale(1)}
+//   }
+// }
+
+// @mixin carbon-animation--resources-icon {
+//   &:hover .file-cabinet-outline {
+//     animation: file-cabinet-outline 3s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+//   }
+
+//   &:hover .file-cabinet-handle {
+//     animation: file-cabinet-handle 3s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+//   }
+
+//   .file-cabinet-outline,
+//   .file-cabinet-handle {
+//     transform-origin: 50% 50%;
+//     will-change: transform;
+//   }
+
+//   @keyframes file-cabinet-handle {
+//     10% {transform: rotate(0)}
+//     14% {transform: rotate(20deg) scale(1.1)}
+//     18% {transform: rotate(-20deg) scale(1.1)}
+//     30% {transform: rotate(0)}
+//     100% {transform: rotate(0)}
+//   }
+
+//   @keyframes file-cabinet-outline {
+//     6% {transform: scale(1.1)}
+//     30% {transform: scale(1.1)}
+//     36% {transform: scale(1)}
+//     100% {transform: scale(1)}
+//   }
+// }
+
+
+// @mixin carbon-animation--settings-icon {
+//   .gear--outer {
+//     transform-origin: 50% 50%;
+//     transform: translate;
+//   }
+
+//   &:hover .gear--outer {
+//     animation: gear-spin 3s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+//   }
+
+//   @keyframes gear-spin {
+//     30% {transform: rotate(180deg)}
+//     100% {transform: rotate(180deg)}
+//   }
+// }
+
+
+// @mixin carbon-animation--learn-icon {
+//  .icon--learn {
+//     will-change: transform;
+//   }
+
+//   &:hover .icon--learn {
+//     animation: binoculars 3s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+//   }
+
+//   @keyframes binoculars {
+//   9% {transform: rotate(-35deg) scale(1.09)}
+//   18% {transform: rotate(0) scale(1)}
+//   100% {transform: rotate(0deg) scale(1)}
+//   }
+// }
+
+// @mixin carbon-animation--connect-icon {
+//   .connect--inner,
+//   .connect--outer {
+//     transform-origin: 50% 50%;
+//     will-change: transform;
+//   }
+
+//   &:hover .connect--inner {
+//     animation: connect-dot 2.5s forwards infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+//   }
+
+//   &:hover .connect--outer {
+//     animation: connect-dot 2.5s forwards 0.23s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+//   }
+
+//   @keyframes connect-dot {
+//     6% {transform: scale(1.15)}
+//     12% {transform: scale(1)}
+//     100% {transform: scale(1)}
+//   }
+// }
+
+// @mixin carbon-animation--download-icon {
+//   .arrow,
+//   .tray {
+//   	transform-origin: 50% 50%;
+//     will-change: transform;
+//   }
+
+//   &:hover .tray {
+//     animation: tray 3s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+//   }
+
+//   &:hover .arrow {
+//     animation: arrow 3s infinite ease-out;
+//   }
+  
+//   @keyframes arrow {
+//     8% {transform: translateY(-8px)}
+//     16% {transform: translateY(0px)}
+//     100% {transform: translateY(0px)}
+//   }
+
+//   @keyframes tray {
+//     15% {transform: scale(1)}
+//     22% {transform: scale(1.15)}
+//     29% {transform: scale(1)}
+//     100% {transform: scale(1)}
+//   }
+// }
+
+// @mixin carbon-animation--analytics-icon {
+//   .circle,
+//   .axes {
+//     transform-origin: 50% 50%;
+//     will-change: transform;
+//   }
+// 	&:hover .axes {
+// 	  animation: .85s analytics-outline forwards cubic-bezier(0.4, 0.14, 0.3, 1); 
+// 	}
+
+// 	&:hover .circle {
+// 	  animation: .2s dot forwards cubic-bezier(0.4, 0.14, 0.3, 1);
+// 	}
+
+// 	&:hover .circle--two {
+// 	  animation-delay: .1s;
+// 	}
+
+// 	&:hover .circle--three {
+// 	  animation-delay: .2s;
+// 	}
+
+// 	&:hover .circle--four {
+// 	  animation-delay: .3s;
+// 	}
+
+// 	&:hover .circle--five {
+//   		animation-delay: .4s;
+// 	}
+	
+// 	@keyframes dot {
+// 	  50% {transform: scale(1.15)}
+// 	  100% { transform: scale(1)}
+// 	}
+
+// 	@keyframes analytics-outline {
+// 	  33% { transform: scale(1.05)}
+// 	  66% { transform: scale(1.05)}
+// 	  100% { transform: scale(1)}
+// 	}
+// }
+
+// @mixin carbon-animation--education-icon {
+// 	.head, 
+// 	.tassel {
+// 	  will-change: transform;
+// 	}
+
+// 	.head {
+// 	  transform-origin: 50% 50%;
+// 	}
+
+// 	.tassel {
+// 	   transform-origin: 4px 4px;
+// 	}
+
+// 	&:hover .head {
+// 	  animation: 1s head;
+// 	}
+
+// 	&:hover .tassel {
+// 	  animation: .75s tassel .25s;
+// 	}
+
+// 	@keyframes head {
+// 	  25% { transform: scale(1.03)}
+// 	  50% { transform: scale(1.03)}
+// 	  100% { transform: scale(1)}
+// 	}
+
+// 	@keyframes tassel {
+// 	  33% { transform: rotate(10deg)}
+// 	  66% { transform: rotate(-10deg)}
+// 	  100% { transform: rotate(0)}
+// 	}
+// }
+
+// .Custom {
+//   @include carbon-animation--develop-icon;
+//   @include carbon-animation-catalog-icon;
+//   @include carbon-animation--resources-icon;
+//   @include carbon-animation--settings-icon;
+//   @include carbon-animation--learn-icon;
+//   @include carbon-animation--connect-icon;
+//   @include carbon-animation--download-icon;
+//   @include carbon-animation--analytics-icon;
+//   @include carbon-animation--education-icon;
+
+// }
