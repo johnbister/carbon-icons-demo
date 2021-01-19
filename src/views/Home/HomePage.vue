@@ -89,7 +89,8 @@ export default {
 
 <style lang="scss">
 @import "../../styles/_carbon-utils";
-@import "../../styles/customIconAnimations";
+// @import "../../styles/customIconAnimations";
+@import "../../styles/customIconAnimationsTwo";
 @import "../../styles/blanketAnimations";
 @import "./_mixins.scss";
 
