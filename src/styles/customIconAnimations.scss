@@ -4,12 +4,28 @@
   }
 }
 
-@mixin carbon-animation--develop-icon {
-  &:hover .pencil {
-    animation: pencil 2.5s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+// In this prototype, I have applied data attributes to each path to use for styling, instead of using classes. This is not the ideal solution.
+// I labeled the icons and hopefully based on the animation names, it will be clear which path is being referred to.
+
+
+// edit
+@mixin carbon-animation--edit-icon {
+  // create horizontal space around the icon so the pencil movement doesn't get cropped
+  // adjust positioning so vertical alignment is maintained
+  [data-svg-title="svg-1159"] {
+    width: 44px;
+    margin-left: -6px;
   }
 
-  .pencil {
+  [data-path="path-2601"] {
+    will-change: transform;
+  }
+
+  &:hover [data-path="path-2601"] {
+    animation: pencil 2.5s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+  }
+  
+  [data-path="path-2601"] {
     transform-origin: 50% 50%;
     will-change: transform;
   }
@@ -19,133 +35,166 @@
     20% {transform: translateX(0px)}
     100% {transform: translateX(0px)}
   }
-}
+ }
 
-@mixin carbon-animation-catalog-icon {
-  &:hover .catalog--one {
-    animation: catalogs 3s forwards infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+// grid
+ @mixin carbon-animation-grid-icon {
+  [data-path="path-3197"],
+  [data-path="path-3197"],
+  [data-path="path-3197"],
+  [data-path="path-3197"] {
+    will-change: opacity;
   }
-  &:hover .catalog--two {
-    animation: catalogs 3s forwards 0.2s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+
+  &:hover [data-path="path-3197"] {
+    animation: box-one 2s forwards infinite cubic-bezier(0.4, 0.14, 0.3, 1);
   }
-  &:hover .catalog--three {
-    animation: catalogs 3s forwards 0.4s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+  &:hover [data-path="path-3198"] {
+   animation: box-two 2s forwards infinite cubic-bezier(0.4, 0.14, 0.3, 1);
   }
-  &:hover .catalog--four {
-    animation: catalogs 3s forwards 0.6s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+  &:hover [data-path="path-3199"] {
+    animation: box-three 2s forwards infinite cubic-bezier(0.4, 0.14, 0.3, 1);
   }
-  
-  .catalog {
+  &:hover [data-path="path-3200"] {
+    animation: box-four 2s forwards infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+  }
+
+  @keyframes box-one {
+    0% { opacity: 0 }
+    10% { opacity: 0 }
+    20% { opacity: 1 }
+    100% { opacity: 1}
+  }
+
+  @keyframes box-two {
+    0% { opacity: 0 }
+    15% { opacity: 0 }
+    25% { opacity: 1 }
+    100% { opacity: 1}
+  }
+
+  @keyframes box-three {
+    0% { opacity: 0 }
+    20% { opacity: 0 }
+    30% { opacity: 1 }
+    100% { opacity: 1}
+  }
+
+  @keyframes box-four {
+    0% { opacity: 0 }
+    25% { opacity: 0 }
+    35% { opacity: 1 }
+    100% { opacity: 1 }
+  }
+ }
+
+
+// archive
+ @mixin carbon-animation--archive-icon {
+  [data-path="path-406"] {
     transform-origin: 50% 50%;
     will-change: transform;
   }
 
-  @keyframes catalogs {
-    8% {transform: scale(1.1)}
-    16% {transform: scale(1)}
-    100% {transform: scale(1)}
-  }
-}
-
-@mixin carbon-animation--resources-icon {
-  &:hover .file-cabinet-outline {
-    animation: file-cabinet-outline 3s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
-  }
-
-  &:hover .file-cabinet-handle {
-    animation: file-cabinet-handle 3s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
-  }
-
-  .file-cabinet-outline,
-  .file-cabinet-handle {
-    transform-origin: 50% 50%;
-    will-change: transform;
+  &:hover [data-path="path-406"] {
+    animation: file-cabinet-handle 2s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
   }
 
   @keyframes file-cabinet-handle {
-    10% {transform: rotate(0)}
-    14% {transform: rotate(20deg) scale(1.1)}
-    18% {transform: rotate(-20deg) scale(1.1)}
-    30% {transform: rotate(0)}
-    100% {transform: rotate(0)}
-  }
-
-  @keyframes file-cabinet-outline {
-    6% {transform: scale(1.1)}
-    30% {transform: scale(1.1)}
-    36% {transform: scale(1)}
-    100% {transform: scale(1)}
+    10% {transform: translateX(0)}
+    20% {transform: translateX(-2px)}
+    30% {transform: translateX(2px)}
+    40% {transform: translateX(0)}
+    100% {transform: translateX(0)}
   }
 }
 
-
+// settings
 @mixin carbon-animation--settings-icon {
-  .gear--outer {
+  [data-path="path-5920"] {
     transform-origin: 50% 50%;
-    transform: translate;
+    will-change: transform;
   }
 
-  &:hover .gear--outer {
-    animation: gear-spin 3s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+  &:hover [data-path="path-5920"] {
+    animation: outer-gear 3s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
   }
 
-  @keyframes gear-spin {
+  @keyframes outer-gear {
     30% {transform: rotate(180deg)}
     100% {transform: rotate(180deg)}
   }
 }
 
+// education
+@mixin carbon-animation--education-icon {
+  [data-path="path-2618"] {
+   will-change: transform;
+  transform-origin: 4px 4px;
+ }
 
-@mixin carbon-animation--learn-icon {
- .icon--learn {
-    will-change: transform;
-  }
+ &:hover [data-path="path-2618"] {
+   animation: .75s tassel .25s;
+ }
 
-  &:hover .icon--learn {
-    animation: binoculars 3s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
-  }
-
-  @keyframes binoculars {
-  9% {transform: rotate(-35deg) scale(1.09)}
-  18% {transform: rotate(0) scale(1)}
-  100% {transform: rotate(0deg) scale(1)}
-  }
+ @keyframes tassel {
+   33% { transform: rotate(10deg)}
+   66% { transform: rotate(-8deg)}
+   100% { transform: rotate(0)}
+ }
 }
 
-@mixin carbon-animation--connect-icon {
-  .connect--inner,
-  .connect--outer {
+// connection-signal
+@mixin carbon-animation--connection-signal-icon {
+  [data-path="path-1688"],
+  [data-path="path-1689"],
+  [data-path="path-1690"],
+  [data-path="path-1691"] {
     transform-origin: 50% 50%;
     will-change: transform;
   }
 
-  &:hover .connect--inner {
-    animation: connect-dot 2.5s forwards infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+  &:hover [data-path="path-1688"],
+  &:hover [data-path="path-1689"] {
+    animation: inner-signal 1.5s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
   }
 
-  &:hover .connect--outer {
-    animation: connect-dot 2.5s forwards 0.23s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+  &:hover [data-path="path-1690"],
+  &:hover [data-path="path-1691"] {
+    animation: outer-signal 1.5s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
   }
 
-  @keyframes connect-dot {
-    6% {transform: scale(1.15)}
-    12% {transform: scale(1)}
-    100% {transform: scale(1)}
+  @keyframes inner-signal {
+    0% { opacity: 0}
+    15% { opacity: 0}
+    28% { opacity: 1}
+    100% { opacity: 1}
+  }
+
+  @keyframes outer-signal {
+    0% { opacity: 0}
+    25% { opacity: 0}
+    38% { opacity: 1}
+    100% { opacity: 1}
   }
 }
 
-@mixin carbon-animation--download-icon {
-  .arrow,
-  .tray {
+// download
+ @mixin carbon-animation--download-icon {
+  // create vertical space around the icon so the arrow animation doesn't get cropped; 
+  // adjust position so horizontal alignment is maintained 
+  [data-svg-title="svg-1096"] {
+    height: 48px;
+    margin-top: -16px;
+    transform: translateY(11px)
+  }
+
+  [data-path="path-2399"] {
   	transform-origin: 50% 50%;
     will-change: transform;
   }
 
-  &:hover .tray {
-    animation: tray 3s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
-  }
-
-  &:hover .arrow {
+  &:hover [data-path="path-2399"] {
     animation: arrow 3s infinite ease-out;
   }
   
@@ -154,101 +203,86 @@
     16% {transform: translateY(0px)}
     100% {transform: translateY(0px)}
   }
-
-  @keyframes tray {
-    15% {transform: scale(1)}
-    22% {transform: scale(1.15)}
-    29% {transform: scale(1)}
-    100% {transform: scale(1)}
-  }
 }
 
+// chart--scatter
 @mixin carbon-animation--analytics-icon {
-  .circle,
-  .axes {
+  [data-path="path-1259"],
+  [data-path="path-1260"],
+  [data-path="path-1261"]
+  [data-path="path-1262"],
+  [data-path="path-1263"] {
     transform-origin: 50% 50%;
     will-change: transform;
   }
-	&:hover .axes {
-	  animation: .85s analytics-outline forwards cubic-bezier(0.4, 0.14, 0.3, 1); 
+
+	&:hover [data-path="path-1259"] {
+    animation: dot-one 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
 	}
 
-	&:hover .circle {
-	  animation: .2s dot forwards cubic-bezier(0.4, 0.14, 0.3, 1);
+	&:hover [data-path="path-1260"] {
+	  animation: dot-two 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
 	}
 
-	&:hover .circle--two {
-	  animation-delay: .1s;
+	&:hover [data-path="path-1263"] {
+	  animation: dot-three 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
 	}
 
-	&:hover .circle--three {
-	  animation-delay: .2s;
+	&:hover [data-path="path-1261"] {
+	  animation: dot-four 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
 	}
 
-	&:hover .circle--four {
-	  animation-delay: .3s;
-	}
-
-	&:hover .circle--five {
-  		animation-delay: .4s;
+	&:hover [data-path="path-1262"] {
+  	animation: dot-five 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
 	}
 	
-	@keyframes dot {
-	  50% {transform: scale(1.15)}
-	  100% { transform: scale(1)}
+	@keyframes dot-one {
+    0% { opacity: 0}
+    10% { opacity: 0}
+    20% { opacity: 1}
+    100% { opacity: 1}
 	}
 
-	@keyframes analytics-outline {
-	  33% { transform: scale(1.05)}
-	  66% { transform: scale(1.05)}
-	  100% { transform: scale(1)}
-	}
-}
+  @keyframes dot-two {
+    0% { opacity: 0}
+    15% { opacity: 0}
+    25% { opacity: 1}
+    100% { opacity: 1}
+  }
 
-@mixin carbon-animation--education-icon {
-	.head, 
-	.tassel {
-	  will-change: transform;
-	}
+  @keyframes dot-three {
+    0% { opacity: 0}
+    20% { opacity: 0}
+    30% { opacity: 1}
+    100% { opacity: 1}
+  }
 
-	.head {
-	  transform-origin: 50% 50%;
-	}
+  @keyframes dot-four {
+    0% { opacity: 0}
+    25% { opacity: 0}
+    35% { opacity: 1}
+    100% { opacity: 1}
+  }
 
-	.tassel {
-	   transform-origin: 4px 4px;
-	}
+  @keyframes dot-five {
+    0% { opacity: 0}
+    30% { opacity: 0}
+    40% { opacity: 1}
+    100% { opacity: 1}
+  }
+ }
 
-	&:hover .head {
-	  animation: 1s head;
-	}
-
-	&:hover .tassel {
-	  animation: .75s tassel .25s;
-	}
-
-	@keyframes head {
-	  25% { transform: scale(1.03)}
-	  50% { transform: scale(1.03)}
-	  100% { transform: scale(1)}
-	}
-
-	@keyframes tassel {
-	  33% { transform: rotate(10deg)}
-	  66% { transform: rotate(-10deg)}
-	  100% { transform: rotate(0)}
-	}
-}
+// For demo purposes only, when the user clicks the "Custom" button, the ".Custom" class gets applied to every tile.  
+// For the icon package, there could be a separate class for each mixin 
+// Then users of the package could apply the corresponding class to the tile (or other element) which would trigger the animation on hover
 
 .Custom {
-  @include carbon-animation--develop-icon;
-  @include carbon-animation-catalog-icon;
-  @include carbon-animation--resources-icon;
+  @include carbon-animation--edit-icon;
+  @include carbon-animation-grid-icon;
+  @include carbon-animation--archive-icon;
   @include carbon-animation--settings-icon;
-  @include carbon-animation--learn-icon;
-  @include carbon-animation--connect-icon;
+  @include carbon-animation--connection-signal-icon;
   @include carbon-animation--download-icon;
   @include carbon-animation--analytics-icon;
   @include carbon-animation--education-icon;
-
 }

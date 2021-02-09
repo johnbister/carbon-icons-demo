@@ -3,7 +3,7 @@
     <cv-content class="main-content">
       <div class="bx--grid bx--grid--full-width landing-page">
         <div class="bx--row row--one">
-          <h1 class="landing-page__heading">Carbon Icon Animations Demo</h1>
+          <h1 class="landing-page__heading">Icon Animations Demo</h1>
           <div class="header">
             <h2>Select an icon animation effect</h2>
             <h3>then hover over the tiles to view it:</h3>
@@ -89,9 +89,7 @@ export default {
 
 <style lang="scss">
 @import "../../styles/_carbon-utils";
-// @import "../../styles/customIconAnimations";
-// @import "../../styles/customIconAnimationsTwo";
-@import "../../styles/customIconAnimationsThree";
+@import "../../styles/customIconAnimations";
 @import "../../styles/blanketAnimations";
 @import "./_mixins.scss";
 
