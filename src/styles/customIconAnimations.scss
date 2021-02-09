@@ -4,28 +4,23 @@
   }
 }
 
-// In this prototype, I have applied data attributes to each path to use for styling, instead of using classes. This is not the ideal solution.
-// I labeled the icons and hopefully based on the animation names, it will be clear which path is being referred to.
-
-
 // edit
 @mixin carbon-animation--edit-icon {
   // create horizontal space around the icon so the pencil movement doesn't get cropped
-  // adjust positioning so vertical alignment is maintained
-  [data-svg-title="svg-1159"] {
+  .icon--edit {
     width: 44px;
-    margin-left: -6px;
+    height: 32px;
   }
 
-  [data-path="path-2601"] {
+  .pencil {
     will-change: transform;
   }
 
-  &:hover [data-path="path-2601"] {
+  &:hover .pencil {
     animation: pencil 2.5s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
   }
   
-  [data-path="path-2601"] {
+  .pencil {
     transform-origin: 50% 50%;
     will-change: transform;
   }
@@ -39,23 +34,23 @@
 
 // grid
  @mixin carbon-animation-grid-icon {
-  [data-path="path-3197"],
-  [data-path="path-3197"],
-  [data-path="path-3197"],
-  [data-path="path-3197"] {
+  .box--one,
+  .box--two,
+  .box--three,
+  .box--four {
     will-change: opacity;
   }
 
-  &:hover [data-path="path-3197"] {
+  &:hover .box--one {
     animation: box-one 2s forwards infinite cubic-bezier(0.4, 0.14, 0.3, 1);
   }
-  &:hover [data-path="path-3198"] {
+  &:hover .box--two {
    animation: box-two 2s forwards infinite cubic-bezier(0.4, 0.14, 0.3, 1);
   }
-  &:hover [data-path="path-3199"] {
+  &:hover .box--three {
     animation: box-three 2s forwards infinite cubic-bezier(0.4, 0.14, 0.3, 1);
   }
-  &:hover [data-path="path-3200"] {
+  &:hover .box--four {
     animation: box-four 2s forwards infinite cubic-bezier(0.4, 0.14, 0.3, 1);
   }
 
@@ -91,12 +86,12 @@
 
 // archive
  @mixin carbon-animation--archive-icon {
-  [data-path="path-406"] {
+  .file-cabinet-handle {
     transform-origin: 50% 50%;
     will-change: transform;
   }
 
-  &:hover [data-path="path-406"] {
+  &:hover .file-cabinet-handle {
     animation: file-cabinet-handle 2s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
   }
 
@@ -111,12 +106,12 @@
 
 // settings
 @mixin carbon-animation--settings-icon {
-  [data-path="path-5920"] {
+  .gear--outer {
     transform-origin: 50% 50%;
     will-change: transform;
   }
 
-  &:hover [data-path="path-5920"] {
+  &:hover .gear--outer {
     animation: outer-gear 3s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
   }
 
@@ -128,12 +123,12 @@
 
 // education
 @mixin carbon-animation--education-icon {
-  [data-path="path-2618"] {
+  .tassel {
    will-change: transform;
   transform-origin: 4px 4px;
  }
 
- &:hover [data-path="path-2618"] {
+ &:hover .tassel {
    animation: .75s tassel .25s;
  }
 
@@ -146,21 +141,18 @@
 
 // connection-signal
 @mixin carbon-animation--connection-signal-icon {
-  [data-path="path-1688"],
-  [data-path="path-1689"],
-  [data-path="path-1690"],
-  [data-path="path-1691"] {
+.connect--inner,
+.connect--outer {
     transform-origin: 50% 50%;
     will-change: transform;
   }
 
-  &:hover [data-path="path-1688"],
-  &:hover [data-path="path-1689"] {
+
+  &:hover .connect--inner {
     animation: inner-signal 1.5s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
   }
 
-  &:hover [data-path="path-1690"],
-  &:hover [data-path="path-1691"] {
+  &:hover .connect--outer {
     animation: outer-signal 1.5s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
   }
 
@@ -182,19 +174,20 @@
 // download
  @mixin carbon-animation--download-icon {
   // create vertical space around the icon so the arrow animation doesn't get cropped; 
-  // adjust position so horizontal alignment is maintained 
-  [data-svg-title="svg-1096"] {
-    height: 48px;
-    margin-top: -16px;
-    transform: translateY(11px)
+
+  .icon--download {
+    height: 40px;
+    margin-top: -6px;
+    transform: translateY(3px)
+    // NOTE also there is a change to the viewbox on svg
   }
 
-  [data-path="path-2399"] {
-  	transform-origin: 50% 50%;
+  .arrow {
+    transform-origin: 50% 50%;
     will-change: transform;
   }
 
-  &:hover [data-path="path-2399"] {
+  &:hover .arrow {
     animation: arrow 3s infinite ease-out;
   }
   
@@ -207,41 +200,41 @@
 
 // chart--scatter
 @mixin carbon-animation--analytics-icon {
-  [data-path="path-1259"],
-  [data-path="path-1260"],
-  [data-path="path-1261"]
-  [data-path="path-1262"],
-  [data-path="path-1263"] {
+  .dot--one,
+  .dot--two,
+  .dot--three,
+  .dot--four {
     transform-origin: 50% 50%;
     will-change: transform;
+    transition: 0.2s all;
   }
 
-	&:hover [data-path="path-1259"] {
+  &:hover .dot--one {
     animation: dot-one 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
-	}
+  }
 
-	&:hover [data-path="path-1260"] {
-	  animation: dot-two 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
-	}
+  &:hover .dot--two {
+    animation: dot-two 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
+  }
 
-	&:hover [data-path="path-1263"] {
-	  animation: dot-three 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
-	}
+  &:hover .dot--three {
+    animation: dot-three 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
+  }
 
-	&:hover [data-path="path-1261"] {
-	  animation: dot-four 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
-	}
+  &:hover .dot--four {
+    animation: dot-four 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
+  }
 
-	&:hover [data-path="path-1262"] {
-  	animation: dot-five 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
-	}
-	
-	@keyframes dot-one {
+  &:hover .dot--five {
+    animation: dot-five 2s forwards cubic-bezier(0.4, 0.14, 0.3, 1);
+  }
+  
+  @keyframes dot-one {
     0% { opacity: 0}
     10% { opacity: 0}
     20% { opacity: 1}
     100% { opacity: 1}
-	}
+  }
 
   @keyframes dot-two {
     0% { opacity: 0}
