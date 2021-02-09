@@ -76,7 +76,7 @@ export default {
   data: function() {
     return {
       tileDetails,
-      animationType: "Custom",
+      animationType: "Custom"
     };
   },
   methods: {

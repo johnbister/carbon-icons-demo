@@ -14,3 +14,10 @@ export default {
   name: "EditIcon"
 };
 </script>
+<styles lang="scss">
+.icon--edit {
+    width: 44px;
+    height: 32px;
+    transform-origin: 50% 50%;
+  }
+</styles>

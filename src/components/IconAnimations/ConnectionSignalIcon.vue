@@ -43,4 +43,3 @@ export default {
   name: "ConnectionIcon"
 };
 </script>
-

@@ -6,13 +6,7 @@
 
 // edit
 @mixin carbon-animation--edit-icon {
-  // create horizontal space around the icon so the pencil movement doesn't get cropped
   .icon--edit {
-    width: 44px;
-    height: 32px;
-  }
-
-  .pencil {
     will-change: transform;
   }
 
@@ -21,7 +15,6 @@
   }
   
   .pencil {
-    transform-origin: 50% 50%;
     will-change: transform;
   }
 
@@ -173,15 +166,6 @@
 
 // download
  @mixin carbon-animation--download-icon {
-  // create vertical space around the icon so the arrow animation doesn't get cropped; 
-
-  .icon--download {
-    height: 40px;
-    margin-top: -6px;
-    transform: translateY(3px)
-    // NOTE also there is a change to the viewbox on svg
-  }
-
   .arrow {
     transform-origin: 50% 50%;
     will-change: transform;

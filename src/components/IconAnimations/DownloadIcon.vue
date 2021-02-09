@@ -13,3 +13,9 @@ export default {
   name: "DownloadIcon"
 };
 </script>
+<styles lang="scss">
+  .icon--download {
+    height: 40px;
+    margin-top: -6px;
+  }
+</styles>
