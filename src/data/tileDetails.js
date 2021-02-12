@@ -6,6 +6,7 @@ import EducationIcon from "../components/IconAnimations/EducationIcon";
 import ConnectionSignalIcon from "../components/IconAnimations/ConnectionSignalIcon";
 import DownloadIcon from "../components/IconAnimations/DownloadIcon";
 import ChartScatterIcon from "../components/IconAnimations/ChartScatterIcon";
+import TrashIcon from "../components/IconAnimations/TrashIcon";
 
 // import LearnIcon from "../components/IconAnimations/LearnIcon";
 
@@ -51,6 +52,11 @@ let tileDetails = [
     title: "Analytics",
     info: "View and analyze API analytics data",
     icon: ChartScatterIcon
+  },
+  {
+    title: "Trash",
+    info: "Empty trash",
+    icon: TrashIcon
   }
 ];
 

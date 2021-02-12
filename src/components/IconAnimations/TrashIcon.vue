@@ -1,6 +1,6 @@
 <template>
   <svg class="icon icon--trash" aria-hidden="true" viewBox="0 -10 36 44">
-    <title>download toolkit</title>
+    <title>TrashIcon</title>
     <path
       class="lid"
       d="M20,4h-8V2h8V4z M4,6v2h24V6H4z"
@@ -14,7 +14,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.icon--download {
+.icon--trash {
   width: 36px;
   height: 44px;
   margin-top: -12px;
