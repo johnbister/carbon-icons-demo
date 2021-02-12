@@ -249,6 +249,24 @@
   }
  }
 
+ // trash
+@mixin carbon-animation--trash-icon {
+  .lid {
+  	transform-origin: 50% 50%;
+    will-change: transform;
+  }
+
+  &:hover .lid {
+    animation: lid 3s infinite ease-out;
+  }
+  
+  @keyframes lid {
+    8% {transform: translateY(-3px)}
+    16% {transform: translateY(0px)}
+    100% {transform: translateY(0px)}
+  }
+}
+
 // For demo purposes only, when the user clicks the "Custom" button, the ".Custom" class gets applied to every tile.  
 // For the icon package, there could be a separate class for each mixin 
 // Then users of the package could apply the corresponding class to the tile (or other element) which would trigger the animation on hover
@@ -262,4 +280,5 @@
   @include carbon-animation--download-icon;
   @include carbon-animation--analytics-icon;
   @include carbon-animation--education-icon;
+  @include carbon-animation--trash-icon;
 }
