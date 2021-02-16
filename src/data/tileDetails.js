@@ -7,6 +7,7 @@ import ConnectionSignalIcon from "../components/IconAnimations/ConnectionSignalI
 import DownloadIcon from "../components/IconAnimations/DownloadIcon";
 import ChartScatterIcon from "../components/IconAnimations/ChartScatterIcon";
 import TrashIcon from "../components/IconAnimations/TrashIcon";
+import PowerIcon from "../components/IconAnimations/PowerIcon";
 
 // import LearnIcon from "../components/IconAnimations/LearnIcon";
 
@@ -57,6 +58,11 @@ let tileDetails = [
     title: "Trash",
     info: "Empty trash",
     icon: TrashIcon
+  },
+  {
+    title: "Power",
+    info: "Turn on or off",
+    icon: PowerIcon
   }
 ];
 
