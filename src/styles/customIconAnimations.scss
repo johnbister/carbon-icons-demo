@@ -287,6 +287,23 @@
   }
 }
 
+// upload
+@mixin carbon-animation--upload-icon {
+  .arrow {
+  	transform-origin: 50% 50%;
+    will-change: transform;
+  }
+
+  &:hover .arrow {
+    animation: arrow 3s infinite ease-out;
+  }
+  
+  @keyframes arrow {
+    8% {transform: translateY(-8px)}
+    16% {transform: translateY(0px)}
+    100% {transform: translateY(0px)}
+  }
+}
 // For demo purposes only, when the user clicks the "Custom" button, the ".Custom" class gets applied to every tile.  
 // For the icon package, there could be a separate class for each mixin 
 // Then users of the package could apply the corresponding class to the tile (or other element) which would trigger the animation on hover
@@ -302,4 +319,5 @@
   @include carbon-animation--education-icon;
   @include carbon-animation--trash-icon;
   @include carbon-animation--power-icon;
+  @include carbon-animation--upload-icon;
 }
