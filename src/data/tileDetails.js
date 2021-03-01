@@ -9,6 +9,7 @@ import ChartScatterIcon from "../components/IconAnimations/ChartScatterIcon";
 import TrashIcon from "../components/IconAnimations/TrashIcon";
 import PowerIcon from "../components/IconAnimations/PowerIcon";
 import UploadIcon from "../components/IconAnimations/UploadIcon";
+import SaveIcon from "../components/IconAnimations/SaveIcon";
 
 // import LearnIcon from "../components/IconAnimations/LearnIcon";
 
@@ -69,6 +70,11 @@ let tileDetails = [
     title: "Upload",
     info: "Upload file",
     icon: UploadIcon
+  },
+  {
+    title: "Save",
+    info: "Save file",
+    icon: SaveIcon
   }
 ];
 
