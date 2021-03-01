@@ -304,6 +304,26 @@
     100% {transform: translateY(0px)}
   }
 }
+
+// save
+@mixin carbon-animation--save-icon {
+  &:hover .slide {
+    animation: file-cabinet-handle 2s infinite cubic-bezier(0.4, 0.14, 0.3, 1);
+  }
+
+  .slide {
+    transform-origin: 50% 50%;
+    will-change: transform;
+  }
+
+  @keyframes slide {
+    10% {transform: translateX(0)}
+    20% {transform: translateX(-2px)}
+    30% {transform: translateX(2px)}
+    40% {transform: translateX(0)}
+    100% {transform: translateX(0)}
+  }
+}
 // For demo purposes only, when the user clicks the "Custom" button, the ".Custom" class gets applied to every tile.  
 // For the icon package, there could be a separate class for each mixin 
 // Then users of the package could apply the corresponding class to the tile (or other element) which would trigger the animation on hover
@@ -320,4 +340,5 @@
   @include carbon-animation--trash-icon;
   @include carbon-animation--power-icon;
   @include carbon-animation--upload-icon;
+  @include carbon-animation--save-icon;
 }
